@@ -8,7 +8,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ipsaya=$(curl -sS ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/RanTempest/scvps/main/izinIP"
+data_ip="https://raw.githubusercontent.com/stangkudut/Script-VPN/main/izinIP"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
@@ -18,23 +18,23 @@ checking_sc() {
     echo -e "\033[42m          ANDA HARUS MENDAFTAR DAHULU UNTUK MENJADI SELLER         \033[0m"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     echo -e ""
-    echo -e "            ${RED}DAFTAR DULU DEK !${NC}"
+    echo -e "            ${RED}DAFTAR DULU BOS !${NC}"
     echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
     echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6283141751466"
+    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6685171610141"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit
   fi
 }
 checking_sc
 clear
-Repo1="https://raw.githubusercontent.com/RanTempest/scvps/main/"
+Repo1="https://raw.githubusercontent.com/stangkudut/Script-VPN/main/"
 cd izin
 export MYIP=$( curl -sS ipv4.icanhazip.com/ )
 SELLER=$(curl -sS ${Repo1}ip | grep $MYIP | awk '{print $2}')
 Exp100=$(curl -sS ${Repo1}ip | grep $MYIP | awk '{print $3}')
-data_ip="https://raw.githubusercontent.com/RanTempest/scvps/main/izin"
+data_ip="https://raw.githubusercontent.com/stangkudut/Script-VPN/main/izin"
 cd izin
 d2=$(date -d "$date_list" +"+%s")
 d1=$(date -d "$Exp" +"+%s")
@@ -59,15 +59,15 @@ END='\e[0m'
 
 AKTIF="VERIFIED"
 TOKEN="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"
-REPO="https://github.com/RanTempest/scvps.git"
-EMAIL="rantempest2@gmail.com"
-USER="RanTempest"
+REPO="https://github.com/stangkudut/Script-VPN.git"
+EMAIL="st4ngkudut@gmail.com"
+USER="stangkudut"
 
 
 add-ip() {
 TIMES="10"
-CHATID="6953253803"
-KEY="6311738419:AAFYqB7pbUYA62pKQFA_fyQjEOqzQWoP93U"
+CHATID="799607363"
+KEY="6829419293:AAF5yvSYalDERlKTewfSTS_qR_k-8V1BUEU"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 
@@ -77,7 +77,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     echo -e ""
     echo -e ""
     read -p "  Input IP Address : " ip
-    CLIENT_EXISTS=$(grep -w $ip /root/scvps/izinIP | wc -l)
+    CLIENT_EXISTS=$(grep -w $ip /root/Script-VPN/izinIP | wc -l)
     if [[ ${CLIENT_EXISTS} == '1' ]]; then
     echo "IP Already Exist !"
     exit 0
@@ -100,22 +100,22 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 
     if [[ ${exp} == '1' ]]; then
     exp2=`date -d "30 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/scvps/izinIP
+    echo "### ${name} ${exp2} ${ip}" >> /root/Script-VPN/izinIP
     elif [[ ${exp} == '2' ]]; then
     exp2=`date -d "60 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/scvps/izinIP
+    echo "### ${name} ${exp2} ${ip}" >> /root/Script-VPN/izinIP
     elif [[ ${exp} == '3' ]]; then
     exp2=`date -d "90 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/scvps/izinIP
+    echo "### ${name} ${exp2} ${ip}" >> /root/Script-VPN/izinIP
     elif [[ ${exp} == '4' ]]; then
     exp2="Lifetime"
-    echo "### ${name} ${exp2} ${ip}" >> /root/scvps/izinIP
+    echo "### ${name} ${exp2} ${ip}" >> /root/Script-VPN/izinIP
     elif [[ ${exp} == '5' ]]; then
     read -p "Input Expired Days : " exp11
     exp2=`date -d "$exp11 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/scvps/izinIP
+    echo "### ${name} ${exp2} ${ip}" >> /root/Script-VPN/izinIP
     fi
-    cd /root/scvps
+    cd /root/stangkudut
     git config --global user.email "${EMAIL}" &> /dev/null
     git config --global user.name "${USER}" &> /dev/null
     rm -rf .git &> /dev/null
@@ -123,8 +123,8 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/RanTempest/scvps
-    git push -f https://${TOKEN}@github.com/RanTempest/scvps.git &> /dev/null
+    git remote add origin https://github.com/stangkudut/Script-VPN
+    git push -f https://${TOKEN}@github.com/stangkudut/Script-VPN.git &> /dev/null
     cd izinIp
     rm -rf /root/scvps
     clear
@@ -165,8 +165,8 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 
 del-ip() {
 TIMES="10"
-CHATID="6953253803"
-KEY="6311738419:AAFYqB7pbUYA62pKQFA_fyQjEOqzQWoP93U"
+CHATID="799607363"
+KEY="6829419293:AAF5yvSYalDERlKTewfSTS_qR_k-8V1BUEU"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
     rm -rf /root/scvps
@@ -183,8 +183,8 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     echo -e "${BlueCyan} ———————————————————————————————————————${Xark}"
 
     read -p "   Input IP Address To Delete : " ipdel
-    name=$(cat /root/scvps/izinIP | grep $ipdel | awk '{print $2}')
-    exp=$(cat /root/scvps/izinIP | grep $ipdel | awk '{print $3}')
+    name=$(cat /root/Script-VPN/izinIP | grep $ipdel | awk '{print $2}')
+    exp=$(cat /root/Script-VPN/izinIP | grep $ipdel | awk '{print $3}')
     if [[ ${exp} == 'Lifetime' ]]; then
     sed -i "/^#&   $name   $exp $ipdel/,/^},{/d" /root/scvps/izinIP
     else
@@ -198,8 +198,8 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/RanTempest/scvps
-    git push -f https://${TOKEN}@github.com/RanTempest/scvps.git &> /dev/null
+    git remote add origin https://github.com/stangkudut/Script-VPN
+    git push -f https://${TOKEN}@github.com/stangkudut/Script-VPN.git &> /dev/null
     rm -rf /root/scvps
     clear
     sleep 1
@@ -236,12 +236,12 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 
 renew-ip() {
 TIMES="10"
-CHATID="6953253803"
-KEY="6311738419:AAFYqB7pbUYA62pKQFA_fyQjEOqzQWoP93U"
+CHATID="799607363"
+KEY="6829419293:AAF5yvSYalDERlKTewfSTS_qR_k-8V1BUEU"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
     rm -rf /root/ipvps
-    git clone ${REPO} /root/scvps/ &> /dev/null
+    git clone ${REPO} /root/Script-VPN/ &> /dev/null
     clear
     echo -e "${BlueCyan} ———————————————————————————————————————${Xark}"
     echo -e "          \e[1;97mList IP Address Have Been Registered${NC}"
@@ -261,7 +261,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     exp2=$(( (d1 - d2) / 86400 ))
     exp3=$(($exp2 + $days))
     exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
-    sed -i "s/### $name $exp $ipdel/### $name $exp4 $ipdel/g" /root/scvps/izinIP
+    sed -i "s/### $name $exp $ipdel/### $name $exp4 $ipdel/g" /root/Script-VPN/izinIP
     cd /root/scvps
     git config --global user.email "${EMAIL}" &> /dev/null
     git config --global user.name "${USER}" &> /dev/null
@@ -270,8 +270,8 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/RanTempest/scvps
-    git push -f https://${TOKEN}@github.com/RanTempest/scvps.git &> /dev/null
+    git remote add origin https://github.com/stangkudut/Script-VPN
+    git push -f https://${TOKEN}@github.com/stangkudut/Script-VPN.git &> /dev/null
     rm -rf /root/scvps
     clear
     sleep 1
