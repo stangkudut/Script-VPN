@@ -32,7 +32,7 @@ clear;clear;clear
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "  Welcome To ST4NGKUDUT vpn Script Installer${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Auther : ${green}Tempest® ${NC}${YELLOW}(${NC} ${green} Kanaeru Tunneling ${NC}${YELLOW})${NC}"
+echo -e "  Auther : ${green}® ${NC}${YELLOW}(${NC} ${green} ST4NGKUDUT Tunneling ${NC}${YELLOW})${NC}"
 echo -e " FREE 4 ALL${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
@@ -92,7 +92,7 @@ clear
 clear
 #########################
 # REPO    
-    REPO="https://raw.githubusercontent.com/RanTempest/scvps/main/"
+    REPO="https://raw.githubusercontent.com/stangkudut/Script-VPN/main/"
 
 ####
 start=$(date +%s)
@@ -657,9 +657,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user oceantestdigital@gmail.com
-from oceantestdigital@gmail.com
-password jokerman77 
+user backupst4@gmail.com
+from backupst4@gmail.com
+password st4ngkudut 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
