@@ -30,7 +30,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://raw.githubusercontent.com/RanTempest/scvps/main/limit/menu.zip
+    wget https://raw.githubusercontent.com/stangkudut/Script-VPN/main/limit/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
@@ -39,7 +39,7 @@ res1() {
     rm -rf update.sh
 }
 function noobzvpn() {
-wget "https://raw.githubusercontent.com/RanTempest/scvps/main/limit/noobzvpns.zip"
+wget "https://raw.githubusercontent.com/stangkudut/Script-VPN/main/limit/noobzvpns.zip"
 unzip noobzvpns.zip
 bash install.sh
 rm noobzvpns.zip
