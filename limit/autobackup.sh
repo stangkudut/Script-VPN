@@ -15,7 +15,7 @@ echo -e "\e[32mloading...\e[0m"
 clear
 IP=$(wget -qO- icanhazip.com)
 dateToday=$(date +"%Y-%m-%d")
-Name=$(curl https://raw.githubusercontent.com/RanTempest/scvps/main/izin | grep $MYIP | awk '{print $2}')
+Name=$(curl https://github.com/stangkudut/Script-VPN/main/izin | grep $MYIP | awk '{print $2}')
 
 setup_bot() {
     switch=$(grep -i "switch" /root/.bckupbot | awk '{print $2}')
@@ -164,7 +164,7 @@ botbckpBot_menu() {
 	echo -e " ${Blue}│$NC\033[41m               Telegram Bot (AutoBackup)               \E[0m"
 	echo -e " ${Blue}╰═══════════════════════════════════════════════════════╯${NC}"
     echo -e " ${Blue}╭═══════════════════════════════════════════════════════╮${NC}"
-    echo -e " ${Blue}│$NC ${green} VPS Data Backup By TEMPEST"
+    echo -e " ${Blue}│$NC ${green} VPS Data Backup By ST4NGKUDUT"
     echo -e " ${Blue}│$NC"
     echo -e " ${Blue}│$NC ${green} Status AutoBackup : $sts"
     echo -e " ${Blue}│$NC [${green}1${NC}] Setup Bot Telegram \e[0m"
