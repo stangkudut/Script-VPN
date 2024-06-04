@@ -17,7 +17,7 @@
 - Penambahan fail2ban
 - Auto block sebagian ads indo by default
 - Auto clear log per 3 menit
-- Auto deler expired
+- Auto delte expired
 - User Details Akun
 
 ### PORT INFO
